@@ -51,6 +51,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 import java.util.Locale;
+import java.util.Stack;
 
 /**
  * Activity for the Ocr Detecting app.  This app detects text and displays the value with the
@@ -81,6 +82,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
     // A TextToSpeech engine for speaking a String value.
     private TextToSpeech tts;
+    private SearchEngine searchEngine;
 
     /**
      * Initializes the UI and creates the detector pipeline.
@@ -127,6 +129,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                     }
                 };
         tts = new TextToSpeech(this.getApplicationContext(), listener);
+
+        searchEngine = new SearchEngine();
     }
 
     /**
@@ -336,6 +340,10 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             text = graphic.getTextBlock();
             if (text != null && text.getValue() != null) {
                 Log.d(TAG, "text data is being spoken! " + text.getValue());
+                searchEngine.search(text.getValue(), (String result) -> {
+                    // TODO: Update TextBlock with result
+                    Log.d(TAG, "Received search result " + result);
+                });
                 // Speak the string.
                 tts.speak(text.getValue(), TextToSpeech.QUEUE_ADD, null, "DEFAULT");
             }
