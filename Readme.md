@@ -2,6 +2,13 @@
 
 Use [ML Kit](https://developers.google.com/ml-kit) [ARCore](https://developers.google.com/ar), and [Sceneform](https://github.com/google-ar/sceneform-android-sdk) to make it easy to look up beer on menus and in images using your Android phone.
 
+# Features
+
+- Done: Recognize and display text in the camera feed
+- TODO: Persistently highlight selected text
+- TODO: Search for beer results given a string
+- TODO: Render UI on selected text
+
 # Notes
 
 May 6th 2020:  
