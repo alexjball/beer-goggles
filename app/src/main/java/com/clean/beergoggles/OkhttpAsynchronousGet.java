@@ -17,27 +17,26 @@ public class OkhttpAsynchronousGet {
 
     private final OkHttpClient client = new OkHttpClient();
 
-    public void run(ResultCallback resultCallback) {
+    public void run(String url, ResultCallback resultCallback) {
         Request request = new Request.Builder()
-                .url("http://publicobject.com/helloworld.txt")
+                .url(url)
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
             @Override public void onFailure(Call call, IOException e)
             {
                 resultCallback.onFailure(e.toString());
-                e.printStackTrace();
             }
 
             @Override public void onResponse(Call call, Response response) {
                 try (ResponseBody responseBody = response.body()) {
                     if (!response.isSuccessful())
                     {
-                        resultCallback.onSuccess("Unexpected code " + response);
+                        resultCallback.onFailure("Unexpected code " + response);
                     }
                     resultCallback.onSuccess(responseBody.string());
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    resultCallback.onFailure((e.toString()));
                 }
             }
         });

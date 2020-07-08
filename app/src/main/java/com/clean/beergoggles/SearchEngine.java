@@ -6,7 +6,7 @@ public class SearchEngine {
     }
 
     public void search(String searchText, ResultCallback callback) {
-        new OkhttpAsynchronousGet().run(new OkhttpAsynchronousGet.ResultCallback() {
+        new OkhttpAsynchronousGet().run("http://example.com", new OkhttpAsynchronousGet.ResultCallback() {
             @Override
             public void onSuccess(String result) {
                 // TODO: Asynchronously search the web for searchText and invoke callback with the result.
