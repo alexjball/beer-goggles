@@ -19,12 +19,14 @@ Use [ML Kit](https://developers.google.com/ml-kit) [ARCore](https://developers.g
 5. Set the `textInput.jpg` to show up on the wall in the virtual camera under camera settings of your emulator.
 6. Walk over to the wall in the virtual camera. You should see recognized text appear over the wall.
 
-
 # Notes
 
 May 6th 2020:  
 Emulators need Google play services update to run app.  Get the APK, Google_Play_Services_for_AR_1.16_x86_for_emulator.apk, from https://github.com/google-ar/arcore-android-sdk/releases and drag and drop the APK on to the running emulated phone to update the Google play services
-Next steps are to introduce a text string in to the emulated environment and to capture the text string for processing:  https://developers.google.com/vision/android/getting-started
+Next steps are to introduce a text string in to the emulated environment and to capture the text string for processing:
+  - https://developers.google.com/vision/android/getting-started
+  - https://codelabs.developers.google.com/codelabs/mobile-vision-ocr/#0
+
 
 May 11th 2020:
 Use extended controls once emulator is running to embed pictures in emulated camera environment:
