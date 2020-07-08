@@ -9,6 +9,17 @@ Use [ML Kit](https://developers.google.com/ml-kit) [ARCore](https://developers.g
 - TODO: Search for beer results given a string
 - TODO: Render UI on selected text
 
+# Setup
+
+0. Clone this repository
+1. Install [Android Studio](https://developer.android.com/studio/install)
+2. Install [Android R SDK](https://developer.android.com/studio/intro/update) under SDK Platforms 
+3. Create an [AVD](https://developer.android.com/studio/run/managing-avds). Recommend using a Pixel 3a with the Play Store Badge and Android R. 
+4. Open the repository directory in Android studio, select "app" in the top bar to the right of the hammer, and click the green play button to build the app and install on your emulator.
+5. Set the `textInput.jpg` to show up on the wall in the virtual camera under camera settings of your emulator.
+6. Walk over to the wall in the virtual camera. You should see recognized text appear over the wall.
+
+
 # Notes
 
 May 6th 2020:  
