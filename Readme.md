@@ -11,6 +11,8 @@ Use [ML Kit](https://developers.google.com/ml-kit) [ARCore](https://developers.g
 
 # Setup
 
+0. Join the [Clean Code Slack](https://join.slack.com/t/cleancodersgroup/shared_invite/enQtNzEyMjgyMDU3MDYwLTZkMjViNWVkZTJlNTI4NjZmZGIzNGY5NDA2NThhMGJiOWNmMTRkYmI4ZTUzYzI0YzJmYTZhNDMwM2UzY2I3MjU)
+0. Join the [#project-android-camera](https://cleancodersgroup.slack.com/archives/C012RC4D7MM) channel
 0. Clone this repository
 1. Install [Android Studio](https://developer.android.com/studio/install)
 2. Install [Android R SDK](https://developer.android.com/studio/intro/update) under SDK Platforms 
